@@ -11,7 +11,7 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
-        background: linear-gradient(to left top, blue, pink);
+        background: linear-gradient(to left top, black, red);
       }
       .tabs-label {
         color: transparent;
@@ -28,7 +28,7 @@
       class="canvas"
     ></canvas>
     <div class="overlay">
-      <audio style="display: none" autoplay loop>
+      <audio style="display: none;" autoplay loop id="audio">
         <source
           src="https://webfs.ali.kugou.com/202201182010/4e2b0e8c53236b045dfccd66935e0f26/G234/M09/15/13/iocBAF76KgyABP6gACmn0zqZA2U052.mp3"
           type="audio/mpeg"
@@ -418,6 +418,12 @@
 
       initVars();
       frame();
+      document.body.addEventListener('click',()=>{
+        document.getElementById('audio').play()
+      })
+      document.body.addEventListener('touch',()=>{
+        document.getElementById('audio').play()
+      })
     </script>
     <script src="./index.js"></script>
   </body>
