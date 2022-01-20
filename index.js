@@ -22,7 +22,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate("|#countdown 3||祝|余|慧|生|日|快|乐|#rectangle|");
+      S.UI.simulate("|#countdown 3||祝|余慧公主|生|日|快|乐|#rectangle|我们爱你");
     }
 
     S.Drawing.loop(function () {
@@ -224,7 +224,7 @@ S.UI = (function () {
             );
         }
       },
-      3000,
+      2000,
       sequence.length
     );
   }
@@ -603,8 +603,8 @@ S.ShapeBuilder = (function () {
       s = Math.min(
         fontSize,
         (shapeCanvas.width / shapeContext.measureText(l).width) *
-          0.8 *
-          fontSize,
+        0.8 *
+        fontSize,
         (shapeCanvas.height / fontSize) * (isNumber(l) ? 1 : 0.45) * fontSize
       );
       setFontSize(s);
